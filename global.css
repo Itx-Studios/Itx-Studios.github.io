@@ -1,3 +1,4 @@
+/*general*/
 html, body {
     height: 100%;
 }
@@ -16,6 +17,7 @@ h1, p, a {
     color: black;
 }
 
+/*util*/
 .justify-center {
     display: flex;
     justify-content: center;
@@ -41,6 +43,34 @@ h1, p, a {
     background-color: #3a3a3a;
 }
 
+/*dark theme*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1c1e20 !important;
+    }
+
+    h1, p, a {
+        color: #f6fbff !important;
+    }
+
+    .description {
+        color: #88a2c9 !important;
+    }
+
+    .sep-bar {
+        background-color: #d8d8d8 !important;
+    }
+
+    .ver-sep-bar {
+        background-color: #d8d8d8 !important;
+    }
+
+    .blur-ball {
+        filter: blur(16rem) !important;
+    }
+}
+
+/*blur ball*/
 .blur-ball {
     position: absolute;
     top: 53%;
@@ -72,32 +102,33 @@ h1, p, a {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1c1e20;
-    }
-
-    h1, p, a {
-        color: #f6fbff;
-    }
-
-    .description {
-        color: #88a2c9 !important;
-    }
-
-    .sep-bar {
-        background-color: #d8d8d8 !important;
-    }
-
-    .ver-sep-bar {
-        background-color: #d8d8d8 !important;
-    }
-
-    .blur-ball {
-        filter: blur(16rem);
-    }
+/*hover card*/
+.hover-card-container {
+    perspective: 1000px;
+}
+  
+.hover-card {
+    width: 275px;
+    height: 400px;
+    background: linear-gradient(135deg, fuchsia, aqua);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
+.hover-card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.hover-card:hover {
+    transform: rotateY(15deg) rotateX(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/*index.html*/
 .main-container {
     position: absolute;
     top: 50%;
@@ -130,4 +161,19 @@ h1, p, a {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+}
+
+/*team.html*/
+.team-title {
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.team-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
 }
