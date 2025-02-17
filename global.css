@@ -3,17 +3,17 @@ html, body {
     height: 100%;
 }
 
-body, h1, p, a {
+body, h1, h3, p, a {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f6fbff;
+    background-color: #dce1e6;
     overflow-x: hidden;
 }
 
-h1, p, a {
+h1, h3, p, a, button {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
@@ -28,9 +28,20 @@ h1, p, a {
     justify-content: center;
 }
 
+.justify-end {
+    display: flex;
+    justify-content: end;
+}
+
 .description{
     color: #233d5f;
     font-size: 0.95rem;
+}
+
+.glow-title {
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
 }
 
 .sep-bar {
@@ -143,12 +154,6 @@ h1, p, a {
 }
 
 /*team.html*/
-.team-title {
-    margin-top: 2rem;
-    font-family: 'Inter', sans-serif;
-    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
-}
-
 .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -158,13 +163,58 @@ h1, p, a {
     margin-top: 3rem;
 }
 
+/*projects.html*/
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 3rem;
+    max-width: 85%;
+}
+
+.project-card {
+    width: 400px;
+    /*height: 300px;*/
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.project-title {
+    font-size: 1.2rem;
+}
+
+.project-button {
+    width: fit-content;
+    padding: 0.5rem 1.25rem;
+    background-color: #7ec5ff;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 0.2rem;
+}
+
 /*dark theme*/
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #1c1e20;
     }
 
-    h1, p, a {
+    h1, h3, p, a, button {
         color: #f6fbff;
     }
 
@@ -191,9 +241,31 @@ h1, p, a {
     .blur-ball {
         filter: blur(16rem);
     }
+
+    .project-card {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 }
 
 /*responsive stuff*/
+@media (width < 96rem) {
+    .projects-container {
+        max-width: 95%;
+    }
+}
+
+@media (width < 60rem) {
+    .projects-container {
+        max-width: 99%;
+    }
+}
+
+@media (width < 54rem) {
+    .project-card {
+        width: 90%;
+    }
+}
+
 @media (width < 36rem) {
     .title {
         font-size: 3.2rem;
@@ -201,5 +273,9 @@ h1, p, a {
 
     .top-right-icon {
         visibility: hidden;
+    }
+
+    .projects-container, .team-container {
+        gap: 1rem;
     }
 }
