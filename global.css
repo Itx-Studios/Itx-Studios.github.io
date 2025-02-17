@@ -10,11 +10,16 @@ body, h1, p, a {
 
 body {
     background-color: #f6fbff;
+    overflow-x: hidden;
 }
 
 h1, p, a {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+}
+
+.image-white {
+    display: none;
 }
 
 /*util*/
@@ -41,33 +46,6 @@ h1, p, a {
     width: 0.125rem;
     border-radius: 1rem;
     background-color: #3a3a3a;
-}
-
-/*dark theme*/
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1c1e20 !important;
-    }
-
-    h1, p, a {
-        color: #f6fbff !important;
-    }
-
-    .description {
-        color: #88a2c9 !important;
-    }
-
-    .sep-bar {
-        background-color: #d8d8d8 !important;
-    }
-
-    .ver-sep-bar {
-        background-color: #d8d8d8 !important;
-    }
-
-    .blur-ball {
-        filter: blur(16rem) !important;
-    }
 }
 
 /*blur ball*/
@@ -142,6 +120,7 @@ h1, p, a {
 .title {
     font-size: 4.3rem;
     font-family: 'Inter', sans-serif;
+    white-space: nowrap;
 }
 
 .slogan {
@@ -172,8 +151,55 @@ h1, p, a {
 
 .team-container {
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
     justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
+}
+
+/*dark theme*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1c1e20;
+    }
+
+    h1, p, a {
+        color: #f6fbff;
+    }
+
+    .image-white {
+        display: block;
+    }
+
+    .image-black {
+        display: none;
+    }
+
+    .description {
+        color: #88a2c9;
+    }
+
+    .sep-bar {
+        background-color: #d8d8d8;
+    }
+
+    .ver-sep-bar {
+        background-color: #d8d8d8;
+    }
+
+    .blur-ball {
+        filter: blur(16rem);
+    }
+}
+
+/*responsive stuff*/
+@media (width < 36rem) {
+    .title {
+        font-size: 3.2rem;
+    }
+
+    .top-right-icon {
+        visibility: hidden;
+    }
 }
