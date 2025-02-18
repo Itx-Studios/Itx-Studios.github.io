@@ -41,7 +41,7 @@ h1, h3, p, a, button {
 .glow-title {
     margin-top: 2rem;
     font-family: 'Inter', sans-serif;
-    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .sep-bar {
@@ -65,7 +65,7 @@ h1, h3, p, a, button {
     top: 53%;
     left: 48%;
     border-radius: 50%;
-    height: 34rem;
+    height: 36rem;
     aspect-ratio: 1;
     translate: -50% -50%;
     background: linear-gradient(
@@ -75,6 +75,12 @@ h1, h3, p, a, button {
     );
     animation: rotate 36s infinite;
     filter: blur(7rem);
+    z-index: -1;
+}
+
+.small-blur-ball {
+    height: 9rem;
+    filter: blur(2rem);
 }
 
 @keyframes rotate {
@@ -163,6 +169,11 @@ h1, h3, p, a, button {
     margin-top: 3rem;
 }
 
+.team-blur-ball {
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(72rem);
+}
+
 /*projects.html*/
 .projects-container {
     display: flex;
@@ -176,7 +187,6 @@ h1, h3, p, a, button {
 
 .project-card {
     width: 400px;
-    /*height: 300px;*/
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -208,6 +218,47 @@ h1, h3, p, a, button {
     margin-top: 0.2rem;
 }
 
+/*contact.html*/
+.contact-title{
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.contact-blur-ball-1 {
+    top: 30%;
+    left: 60%;
+    height: 9rem !important;
+}
+
+.contact-blur-ball-2 {
+    top: 40%;
+    left: 25%;
+    background: linear-gradient(to right, sandybrown, darkturquoise);
+    height: 15rem !important;
+}
+
+.contact-blur-ball-3 {
+    top: 70%;
+    left: 75%;
+    background: linear-gradient(to right, crimson, mediumseagreen);
+    height: 12rem !important;
+}
+
+.contact-blur-ball-4 {
+    top: 65%;
+    left: 52%;
+    background: linear-gradient(to right, slateblue, hotpink);
+    height: 7rem !important;
+}
+
+.contact-blur-ball-5 {
+    top: 80%;
+    left: 35%;
+    background: linear-gradient(to right, cornflowerblue, lawngreen);
+    height: 9rem !important;
+}
+
 /*dark theme*/
 @media (prefers-color-scheme: dark) {
     body {
@@ -226,6 +277,10 @@ h1, h3, p, a, button {
         display: none;
     }
 
+    .glow-title {
+        text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+    }
+
     .description {
         color: #88a2c9;
     }
@@ -239,7 +294,12 @@ h1, h3, p, a, button {
     }
 
     .blur-ball {
+        height: 34rem;
         filter: blur(16rem);
+    }
+
+    .small-blur-ball {
+        filter: blur(4rem);
     }
 
     .project-card {
