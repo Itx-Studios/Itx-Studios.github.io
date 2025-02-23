@@ -6,28 +6,36 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-fs.rmSync("./dist", {recursive: true, force: true});
+fs.rmSync(wdPath("dist"), {recursive: true, force: true});
+fs.mkdirSync(wdPath("dist"));
 
-const buf = fs.readFileSync("./data.json");
+const buf = fs.readFileSync(wdPath("data.json"));
 const templateData = JSON.parse(buf.toString());
 
-const srcDir = fs.readdirSync("./src", {withFileTypes: true});
+const srcDir = fs.readdirSync(wdPath("src"), {withFileTypes: true});
 await processSourceFiles(srcDir);
 
 async function processSourceFiles(entries) {
     for (const entry of entries) {
+        const fileName = entry.name;
+
         if (entry.isDirectory()) {
-            const subDir = fs.readdirSync(path.join(__dirname, entry.path, entry.name), {withFileTypes: true});
-            processSourceFiles(subDir);
+            fs.mkdirSync(wdPath(entry.path, fileName).replace("src", "dist"))
+            const subDir = fs.readdirSync(wdPath(entry.path, entry.name), {withFileTypes: true});
+            await processSourceFiles(subDir);
             continue;
         }
 
-        const fileName = entry.name;
         if (fileName.endsWith(".ejs")) {
-            const str = await ejs.renderFile(path.join("src", fileName), templateData)
-            fs.writeFileSync(path.join("dist", fileName.replace("ejs", "html")), str); //!
+            const str = await ejs.renderFile(wdPath("src", fileName), templateData);
+            fs.writeFileSync(wdPath("dist", fileName.replace("ejs", "html")), str);
         } else {
-            fs.cpSync(path.join(entry.path, fileName), path.join(path.join(entry.path.replace("src", "dist"), fileName)));
+            fs.cpSync(wdPath(entry.path, fileName), wdPath(entry.path, fileName).replace("src", "dist"));
         }
     }
+}
+
+function wdPath(...segments) {
+    const joined = path.join(...segments).replaceAll(__dirname, "");
+    return path.join(__dirname, joined);
 }
