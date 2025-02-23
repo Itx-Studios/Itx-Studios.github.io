@@ -12,21 +12,13 @@
     <h1 class="glow-title">Meet our team!</h1>
   </div>
   <div class="team-container">
+    <% for( let i = 0; i < teamMemberCount; i++ ) { %>
     <div class="hover-card-container">
       <div class="hover-card">
-        <img src="/img/member1.jpg" alt="team member">
+        <img src="/img/member<%= i+1 %>.jpg" alt="team member">
       </div>
     </div>
-    <div class="hover-card-container">
-      <div class="hover-card">
-        <img src="/img/member2.jpg" alt="team member">
-      </div>
-    </div>
-    <div class="hover-card-container">
-      <div class="hover-card">
-        <img src="/img/member3.jpg" alt="team member">
-      </div>
-    </div>
+    <% } %>
   </div>
   <div class="blur-ball team-blur-ball"></div>
 </body>

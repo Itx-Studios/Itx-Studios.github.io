@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itx Studios</title>
+  <link rel="stylesheet" href="global.css" type="text/css" media="screen" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="justify-center">
+    <h1 class="glow-title">Latest Projects</h1>
+  </div>
+  <div class="justify-center">
+    <div class="projects-container">
+      <% for( let i = 0; i < projects.length; i++ ) { %>
+      <div class="project-card">
+        <p class="project-title"><%= projects[i].name %></p>
+        <p class="description"><%= projects[i].description %></p>
+        <a class="project-button" href="<%= projects[i].url %>">View</a>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
