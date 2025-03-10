@@ -9,5 +9,10 @@
             "description": "The website you are on right now",
             "url": "https://github.com/Itx-Studios/Itx-Studios.github.io"
         }
+        {
+            "name": "Hood Guessr",
+            "description": "GeoGuessr but better!",
+            "url": "https://www.hood.de/marke/guess-2227.htm"
+        }
     ]
 }
