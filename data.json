@@ -13,6 +13,11 @@
             "name": "Hood Guessr",
             "description": "GeoGuessr but better!",
             "url": "https://www.hood.de/marke/guess-2227.htm"
+        },
+        {
+            "name": "ITX AI",
+            "description": "Artificial Intelligence",
+            "url": "http://www.itxai.com/En/index.asp"
         }
     ]
 }
