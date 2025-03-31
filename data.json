@@ -1,5 +1,5 @@
 {
-    "teamMemberCount": 3,
+    "teamMemberCount": 4,
     "teanMembers": [
         {"img": ""}
     ],
@@ -18,6 +18,11 @@
             "name": "ITX AI",
             "description": "Artificial Intelligence",
             "url": "http://www.itxai.com/En/index.asp"
+        },
+        {
+            "name": "Projekt JR",
+            "description": "Jump and Run Python based Game",
+            "url": "https://github.com/TriBye/Projekt-JR"
         }
     ]
 }
