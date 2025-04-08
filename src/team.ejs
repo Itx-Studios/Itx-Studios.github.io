@@ -12,10 +12,10 @@
     <h1 class="glow-title">Meet our team!</h1>
   </div>
   <div class="team-container">
-    <% for( let i = 0; i < teamMemberCount; i++ ) { %>
+    <% for( let i = 0; i < teamMembers.length; i++ ) { %>
     <div class="hover-card-container">
       <div class="hover-card">
-        <img src="/img/member<%= i+1 %>.jpg" alt="team member">
+        <img src="<%= teamMembers[i].img %>" alt="team member">
       </div>
     </div>
     <% } %>
