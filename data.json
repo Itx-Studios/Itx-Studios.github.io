@@ -15,5 +15,12 @@
             "description": "Jump and Run Python based Game",
             "url": "https://github.com/TriBye/Projekt-JR"
         }
+    ],
+    "blogArticles": [
+        {
+            "title": "Test Article",
+            "description": "This is a test article.",
+            "url": "blog/test.html"
+        }
     ]
 }

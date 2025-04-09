@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h3, p, a, button {
+h1, h2, h3, h4, h5, h6, p, a, button, li {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
@@ -218,6 +218,11 @@ h1, h3, p, a, button {
     margin-top: 0.2rem;
 }
 
+/*articles*/
+.article-link {
+    text-decoration: none;
+}
+
 /*contact.html*/
 .contact-title{
     font-size: 3rem;
@@ -259,13 +264,46 @@ h1, h3, p, a, button {
     height: 9rem !important;
 }
 
+/*blog*/
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 64rem;
+    padding: 5rem 24rem 0 24rem;
+}
+
+.blog-container h1 {
+    margin: 0.67em 0;
+    padding: 0;
+}
+
+.blog-container h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+}
+
+.blog-container p {
+    margin: 1em 0;
+    padding: 0;
+}
+
+.blog-container ol, .blog-container ul {
+    padding-left: 25px;
+    margin: 4px 0;
+}
+
+.blog-container > * {
+    overflow-wrap: break-word;
+}
+
 /*dark theme*/
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #1c1e20;
     }
 
-    h1, h3, p, a, button {
+    h1, h2, h3, h4, h5, h6, p, a, button, li {
         color: #f6fbff;
     }
 
@@ -312,17 +350,32 @@ h1, h3, p, a, button {
     .projects-container {
         max-width: 95%;
     }
+
+    .blog-container {
+        max-width: 52rem;
+        padding: 4rem 0 0 12rem;
+    }
 }
 
 @media (width < 60rem) {
     .projects-container {
         max-width: 99%;
     }
+
+    .blog-container {
+        max-width: 42rem;
+        padding: 3rem 0 0 6rem;
+    }
 }
 
 @media (width < 54rem) {
     .project-card {
         width: 90%;
+    }
+
+    .blog-container {
+        max-width: 32rem;
+        padding: 3rem 0 0 5rem;
     }
 }
 
@@ -337,5 +390,10 @@ h1, h3, p, a, button {
 
     .projects-container, .team-container {
         gap: 1rem;
+    }
+
+    .blog-container {
+        max-width: 22rem;
+        padding: 2rem 0 0 2rem;
     }
 }

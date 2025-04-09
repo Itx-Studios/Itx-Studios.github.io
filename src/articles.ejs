@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itx Studios</title>
+  <link rel="stylesheet" href="global.css" type="text/css" media="screen" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="justify-center">
+    <h1 class="glow-title">Itx Blog</h1>
+  </div>
+  <div class="justify-center">
+    <div class="projects-container">
+      <% for( let i = 0; i < blogArticles.length; i++ ) { %>
+        <a class="article-link" href="<%= blogArticles[i].url %>">
+          <div class="project-card">
+            <p class="project-title"><%= blogArticles[i].title %></p>
+            <p class="description"><%= blogArticles[i].description %></p>
+          </div>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
+<!--TODO Seperate design-->
