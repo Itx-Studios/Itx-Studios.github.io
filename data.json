@@ -8,12 +8,12 @@
         {
             "name": "Pages website",
             "description": "The website you are on right now",
-            "url": "https://github.com/Itx-Studios/Itx-Studios.github.io"
+            "link": "https://github.com/Itx-Studios/Itx-Studios.github.io"
         },
         {
             "name": "Projekt JR",
             "description": "Jump and Run Python based Game",
-            "url": "https://github.com/TriBye/Projekt-JR"
+            "link": "https://github.com/TriBye/Projekt-JR"
         }
     ],
     "blogArticles": [

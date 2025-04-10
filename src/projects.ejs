@@ -17,7 +17,17 @@
       <div class="project-card">
         <p class="project-title"><%= projects[i].name %></p>
         <p class="description"><%= projects[i].description %></p>
-        <a class="project-button" href="<%= projects[i].url %>">View</a>
+        <div class="project-actions">
+          <% if (projects[i].link) { %>
+            <a class="project-button" href="<%= projects[i].link %>">View</a>
+          <% } %>
+          <% if (projects[i].download) { %>
+            <a class="project-button" href="<%= projects[i].download %>" download="<%= projects[i].name %>">Download</a>
+          <% } %>
+          <% if (projects[i].comingSoon) { %>
+            <a class="project-button coming-soon">Coming Soon</a>
+          <% } %>
+        </div>
       </div>
       <% } %>
     </div>
