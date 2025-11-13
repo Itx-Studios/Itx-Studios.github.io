@@ -1,15 +1,6 @@
-# This is a test
+# The ITX AI Series is getting a new Numscan model, Numscan 2
 
-**Understanding Placeholder Texts**
+The ITX Research Department is using more and more ressources to finalize the newest Digit Classificator which not only slams older models in accuracy but also cuts production costs.
+The new model will use Convolutional Technology to boost effiency and making it viable for more real-life scenarios.
 
-Placeholder texts serve as temporary content used in design and development stages to provide context and visualize the structure of a project. They simulate real data and offer a preview of how a product, such as a website or app, will appear once finalized.
-
-Commonly referred to as "dummy text," placeholder content can include text, images, or other elements. For instance, Lorem Ipsum is a standard filler text that has been widely used in the publishing industry since the 1500s. Similarly, in the digital realm, designers use placeholder images or preformatted blocks to illustrate layouts before actual content is available.
-
-Key benefits of placeholder texts include:
-- Highlighting the design without distractions.
-- Allowing developers and stakeholders to assess layout scalability.
-- Enabling early-stage functionality testing.
-
-Despite its usefulness, placeholder content should be replaced with meaningful, audience-appropriate material before a product's release to ensure clarity and engagement.
-Remember: Placeholder texts are only the beginning - what you create next is what truly matters!
+Using Convolutional Neural Networks, Numscan 2 will prevent miss-scaled and poorly drawed digits using Pooling.
